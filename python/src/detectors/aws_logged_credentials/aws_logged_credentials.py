@@ -30,3 +30,6 @@ def log_credentials_compliant():
         aws_secret_access_key=secret_key
     )
 # {/fact}
+
+def hi(lol):
+    print(lolqwlsxqsl)

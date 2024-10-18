@@ -1,0 +1,16 @@
+{
+    "name": "code-scanner-commenter-action",
+    "version": "1.0.0",
+    "description": "A GitHub Action to parse SARIF results from CodeGuru and comment on PRs",
+    "main": "index.js",
+    "type": "module",   
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "@octokit/rest": "^21.0.1",
+        "node-fetch": "^2.6.1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
