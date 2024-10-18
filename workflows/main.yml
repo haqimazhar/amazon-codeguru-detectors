@@ -43,6 +43,7 @@ jobs:
         run: |
           ls -l
           cat codeguru-security-results.sarif.json
+          ls -la
 
       - name: Upload SARIF file as artifact
         uses: actions/upload-artifact@v3
