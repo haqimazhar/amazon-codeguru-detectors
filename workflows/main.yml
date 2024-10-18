@@ -5,7 +5,7 @@ on:
       - 'dev'
   pull_request:
     branches:
-      - "master"
+      - "main"
 
 permissions:
   id-token: write
@@ -50,14 +50,14 @@ jobs:
           name: codeguru-security-results
           path: codeguru-security-results.sarif.json
 
-      # - name: Install dependencies
-      #   run: cd action && npm install
+      - name: Install dependencies
+        run: cd action && npm install
 
-      # - name: Comment on PR with scan results
-      #   uses: ./action
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     repository: ${{ github.repository }}
-      #     pull_request_number: ${{ github.event.pull_request.number }}
-      #     sarif_path: codeguru-security-results.sarif.json
-      #     initial_commit_sha: ${{ github.event.pull_request.head.sha }} 
+      - name: Comment on PR with scan results
+        uses: ./action
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          pull_request_number: ${{ github.event.pull_request.number }}
+          sarif_path: codeguru-security-results.sarif.json
+          initial_commit_sha: ${{ github.event.pull_request.head.sha }} 
