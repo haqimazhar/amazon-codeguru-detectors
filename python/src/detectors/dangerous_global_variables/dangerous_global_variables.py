@@ -7,6 +7,7 @@ def dangerous_global_noncompliant(w):
     # from multiple sections.
     global width
     width = w
+    lol = lambda x: x + width
 # {/fact}
 
 
