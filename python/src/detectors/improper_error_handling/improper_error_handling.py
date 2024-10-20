@@ -18,6 +18,7 @@ def error_handling_continue_noncompliant():
     for i in range(10):
         try:
             int(number)
+            print("Number is an integer.")
         except Exception:
             # Noncompliant: has improper error handling.
             continue

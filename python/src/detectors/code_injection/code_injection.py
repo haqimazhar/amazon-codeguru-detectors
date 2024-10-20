@@ -18,7 +18,6 @@ def execute_input_noncompliant():
 # {fact rule=code-injection@v1.0 defects=0}
 from flask import app
 
-
 @app.route('/')
 def execute_input_compliant():
     from flask import request

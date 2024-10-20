@@ -6,6 +6,7 @@ def improper_authentication_noncompliant(token):
     import jwt
     # Noncompliant: The verify flag is set to false.
     jwt.decode(token, verify=False)
+
 # {/fact}
 
 
@@ -14,4 +15,5 @@ def improper_authentication_compliant(token):
     import jwt
     # Compliant: The verify flag is set to true.
     jwt.decode(token, verify=True)
+    
 # {/fact}
