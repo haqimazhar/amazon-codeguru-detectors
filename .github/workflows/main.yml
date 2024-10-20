@@ -4,6 +4,7 @@ on:
     branches:
       - 'dev'
       - 'codeguru-poc'
+      - 'main'
   pull_request:
     branches:
       - "main"
